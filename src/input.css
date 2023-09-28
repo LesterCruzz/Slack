@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container {
+  @apply max-w-[80rem] w-full p-5 mx-auto;
+}
+
+@layer components {
+  .header {
+    @apply relative w-full z-50 ease-in;
+  }
+  .header.light {
+    @apply fixed duration-500;
+  }
+  .container {
+    @apply lg:duration-300 lg:ease-in-out;
+  }
+  .container.light {
+    @apply lg:rounded-full lg:bg-light mt-5;
+  }
+
+  .header .header__wrapper {
+    @apply lg:flex lg:justify-between lg:items-center;
+  }
+  .header .header__brand {
+    @apply lg:w-28 lg:mr-7 relative;
+  }
+  .header .header__brand .white {
+    @apply lg:z-50 absolute top-[-1.4rem];
+  }
+  .header .header__brand .white.light {
+    @apply lg:hidden;
+  }
+  .header .header__brand .black {
+    @apply lg:absolute top-[-1.2rem] hidden;
+  }
+  .header .header__brand .black.light {
+    @apply block;
+  }
+  .header .branding {
+    @apply lg:flex lg:items-center;
+  }
+  .header .header__nav ul {
+    @apply lg:flex lg:gap-7;
+  }
+  .header .header__nav ul i {
+    @apply text-[.7rem] cursor-pointer text-light;
+  }
+  .header .header__nav ul a {
+    @apply lg:text-light lg:font-bold;
+  }
+  .header .header__nav ul a.light {
+    @apply lg:text-primary;
+  }
+  .header .branding .features__dropdown {
+    @apply content-[''] h-[24rem] w-[53rem] absolute top-[3rem] left-[27.7rem] rounded-lg bg-light opacity-0 duration-300;
+  }
+  .header .branding .features__dropdown.open {
+    @apply content-[''] h-[24rem] w-[53rem] absolute top-[4.4rem] left-[27.7rem] rounded-lg bg-light opacity-100;
+  }
+  .header .header__actions {
+    @apply lg:flex lg:items-center lg:text-light;
+  }
+  .header .header__actions .mr-9:hover {
+    @apply lg:underline;
+  }
+  .header__buttons {
+    @apply lg:h-11 lg:flex lg:items-center;
+  }
+  .header__buttons .talk {
+    @apply lg:font-bold lg:mr-4 lg:hover:border-[2px] lg:border lg:h-full lg:flex lg:items-center lg:justify-center lg:w-36 lg:rounded-[.2rem];
+  }
+  .header__buttons .try {
+    @apply lg:text-primary lg:bg-light lg:hover:border-primary lg:font-bold lg:mr-4 lg:hover:border-[2px] lg:border lg:h-full lg:flex lg:items-center lg:justify-center lg:w-36 lg:rounded-[.2rem] lg:hover:duration-150 lg:hover:ease-linear;
+  }
+
+  /* banner */
+
+  .banner {
+    @apply lg:h-[100vh] lg:w-[100%];
+  }
+  .banner__wrapper {
+    @apply content-[''] w-24 bg-transparent h-[200rem];
+  }
+}
